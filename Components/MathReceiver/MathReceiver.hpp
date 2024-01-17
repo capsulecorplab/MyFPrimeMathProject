@@ -32,21 +32,37 @@ namespace MathModule {
     PRIVATE:
 
       // ----------------------------------------------------------------------
+      // Handler implementations for user-defined typed input ports
+      // ----------------------------------------------------------------------
+
+      //! Handler implementation for mathOpIn
+      //!
+      //! Port for receiving the math operation
+      void mathOpIn_handler(
+          NATIVE_INT_TYPE portNum, //!< The port number
+          F32 val1, //!< The first operand
+          const MathModule::MathOp& op, //!< The operation
+          F32 val2 //!< The second operand
+      );
+
+      //! Handler implementation for schedIn
+      //!
+      //! The rate group scheduler input
+      void schedIn_handler(
+          NATIVE_INT_TYPE portNum, //!< The port number
+          NATIVE_UINT_TYPE context //!< The call order
+      );
+
+    PRIVATE:
+
+      // ----------------------------------------------------------------------
       // Handler implementations for commands
       // ----------------------------------------------------------------------
 
-      //! Handler implementation for command TODO_1
+      //! Handler implementation for command CLEAR_EVENT_THROTTLE
       //!
-      //! TODO
-      void TODO_1_cmdHandler(
-          FwOpcodeType opCode, //!< The opcode
-          U32 cmdSeq //!< The command sequence number
-      );
-
-      //! Handler implementation for command TODO_2
-      //!
-      //! TODO
-      void TODO_2_cmdHandler(
+      //! Clear the event throttle
+      void CLEAR_EVENT_THROTTLE_cmdHandler(
           FwOpcodeType opCode, //!< The opcode
           U32 cmdSeq //!< The command sequence number
       );
