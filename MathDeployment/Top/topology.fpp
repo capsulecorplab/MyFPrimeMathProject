@@ -137,7 +137,8 @@ module MathDeployment {
     }
 
     connections MathDeployment {
-      # Add here connections to user-defined components
+      mathSender.mathOpOut -> mathReceiver.mathOpIn
+      mathReceiver.mathResultOut -> mathSender.mathResultIn
     }
 
   }
