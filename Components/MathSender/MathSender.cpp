@@ -27,13 +27,29 @@ namespace MathModule {
   }
 
   // ----------------------------------------------------------------------
+  // Handler implementations for user-defined typed input ports
+  // ----------------------------------------------------------------------
+
+  void MathSender ::
+    mathResultIn_handler(
+        NATIVE_INT_TYPE portNum,
+        F32 result
+    )
+  {
+    // TODO
+  }
+
+  // ----------------------------------------------------------------------
   // Handler implementations for commands
   // ----------------------------------------------------------------------
 
   void MathSender ::
-    TODO_cmdHandler(
+    DO_MATH_cmdHandler(
         FwOpcodeType opCode,
-        U32 cmdSeq
+        U32 cmdSeq,
+        F32 val1,
+        MathModule::MathOp op,
+        F32 val2
     )
   {
     // TODO
