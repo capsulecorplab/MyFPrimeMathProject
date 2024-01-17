@@ -53,6 +53,10 @@ namespace MathModule {
           NATIVE_UINT_TYPE context //!< The call order
       );
 
+      void parameterUpdated(
+          FwPrmIdType id
+      );
+
     PRIVATE:
 
       // ----------------------------------------------------------------------
